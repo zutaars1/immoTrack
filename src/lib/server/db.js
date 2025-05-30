@@ -25,6 +25,7 @@ async function getAllImmobilien() {
   return immobilien;
 }
 
+// Get immobilie by id
 async function getImmobilieById(id) {
   let immobilie = null;
   try {
@@ -45,6 +46,24 @@ async function getImmobilieById(id) {
   return immobilie;
 }
 
+// Get all vertraege
+async function getAllVertraege() {
+  let vertraege = [];
+  try {
+    const collection = db.collection("vertraege");
+    const query = {};
+
+    // Get all objects that match the query
+    vertraege = await collection.find(query).toArray();
+    vertraege.forEach((vertrag) => {
+      vertrag._id = vertrag._id.toString(); // convert ObjectId to String
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  return vertraege;
+}
+
 /**
 async function getVertraegeByImmobilienId(mongoId) {
   const immo = await db.collection('immobilien').findOne({ _id: new ObjectId(mongoId) });
@@ -56,6 +75,7 @@ async function getVertraegeByImmobilienId(mongoId) {
 export default {
   getAllImmobilien,
   getImmobilieById,
+  getAllVertraege,
  // getVertraegeByImmobilienId
 };
 
