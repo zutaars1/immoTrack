@@ -12,10 +12,11 @@
 
   <div class="card-body d-flex flex-column justify-content-between">
     <div>
-      <h5 class="card-title">{immo.bezeichnung}</h5>
+      <strong><h5 class="card-title">{immo.bezeichnung}</h5></strong>
+      <strong>Art:</strong> {immo.art}<br />
     </div>
 
-    <div class="mt-auto">
+    <div class="mt-3">
       <a class="btn btn-outline-primary w-100" href={`/immobilien/${immo._id}`}>Details</a>
     </div>
   </div>

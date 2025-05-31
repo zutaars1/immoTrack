@@ -34,13 +34,13 @@ async function getImmobilieById(id) {
     immobilie = await collection.findOne(query);
 
     if (!immobilie) {
-      console.log("Keine Immobilie mit der ID: " + id);
-
+      console.log("Keine Immobiliendetails hinterlegt mit der ID: " + id);
+      // TODO: errorhandling
     } else {
       immobilie._id = immobilie._id.toString(); // convert ObjectId to String
     }
   } catch (error) {
-    // errorhandling
+    // TODO: errorhandling
     console.log(error.message);
   }
   return immobilie;
@@ -64,18 +64,43 @@ async function getAllVertraege() {
   return vertraege;
 }
 
-/**
+// Get Vertrag by id
+async function getVertragByID(id) {
+  let vertrag = null;
+  try {
+    const collection = db.collection("vertraege");
+    const query = { _id: new ObjectId(id) }; // filter by id
+    vertrag = await collection.findOne(query);
+
+    if (!vertrag) {
+      console.log("Keine Vertragsdetails hinterlegt mit der ID: " + id);
+      // TODO: errorhandling
+    } else {
+      vertrag._id = vertrag._id.toString(); // convert ObjectId to String
+    }
+  } catch (error) {
+    // TODO: errorhandling
+    console.log(error.message);
+  }
+  return vertrag;
+}
+
+
 async function getVertraegeByImmobilienId(mongoId) {
   const immo = await db.collection('immobilien').findOne({ _id: new ObjectId(mongoId) });
   if (!immo) return [];
-  return await db.collection('vertraege').find({ immobilien_id: immo.id }).toArray();
+  const vertrag = await db.collection('vertraege').findOne({ immobilien_id: immo.id });
+  vertrag._id = vertrag._id.toString(); // convert ObjectId to String
+  return vertrag
 }
-*/
+
 
 export default {
   getAllImmobilien,
   getImmobilieById,
   getAllVertraege,
- // getVertraegeByImmobilienId
+  getVertragByID,
+  getVertraegeByImmobilienId,
+
 };
 

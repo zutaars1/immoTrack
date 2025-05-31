@@ -12,7 +12,7 @@
     </div>
 
     <div class="mt-3">
-      <a class="btn btn-outline-primary w-100" href={`/vertraege/${vertrag._id}`}>Details</a>
+      <a class="btn btn-outline-primary w-100" href={`/vertraege/${vertrag.id}`}>Details</a>
     </div>
   </div>
 </div>

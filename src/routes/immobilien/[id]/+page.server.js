@@ -1,16 +1,16 @@
-import db from "$lib/server/db.js";
+import db from '$lib/server/db.js';
 
 export async function load({ params }) {
-  const immobilie = await db.getImmobilieById(params.id);
+  const id = params.id;
 
-  if (!immobilie) {
-    return {
-      status: 404,
-      error: new Error("Immobilie nicht gefunden")
-    };
-  }
 
-  return {
-    immobilie
-  };
+  const immobilie = await db.getImmobilieById(id);
+
+  if (!immobilie) throw error(404, 'Immobilie nicht gefunden');
+
+  const vertrag = await db.getVertraegeByImmobilienId(immobilie._id);
+
+
+
+  return { immobilie, vertrag};
 }

@@ -3,6 +3,8 @@
   let { data } = $props();
 </script>
 
+<a href="/" class="btn btn-secondary mb-2">← Zurück zur Startseite</a>
+
 <h1 class="mb-4">Alle Verträge</h1>
 
 <div class="row">
