@@ -106,6 +106,19 @@ async function updateVertrag(id, updatedVertrag) {
   }
 }
 
+async function updateImmobilie(id, updated) {
+  try {
+    const collection = db.collection("immobilien");
+    await collection.updateOne(
+      { _id: new ObjectId(id) },
+      { $set: updated }
+    );
+  } catch (err) {
+    console.log("Fehler beim Update der Immobilie:", err.message);
+  }
+}
+
+
 
 export default {
   getAllImmobilien,
@@ -113,6 +126,7 @@ export default {
   getAllVertraege,
   getVertragByID,
   getVertraegeByImmobilienId,
-  updateVertrag
+  updateVertrag,
+  updateImmobilie
 };
 

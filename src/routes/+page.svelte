@@ -6,7 +6,7 @@
 <p class="lead">
   <i>immoTrack hilft dir eine klare Übersicht all deiner Immobilien zu haben und die dazugehörigen Verträge zu verwalten.</i>
 </p>
-<img src="/immoTrack.png" alt="Logo immoTrack" class="d-block mx-auto my-5" style="max-width: 500px;" />
+<img src="/immoTrack.png" alt="Logo immoTrack" class="d-block mx-auto my-5" style="max-width: 300px;" />
 
 <div class="row mt-5">
   <div class="col-md-6 mb-3">

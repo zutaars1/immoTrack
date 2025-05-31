@@ -41,6 +41,7 @@
 
           <div class="mb-3">
             <label class="form-label" for="name_mieter">Mieter</label>
+            <!--COPILOT VORSCHLAG: You need to associate the label with the input by adding a for attribute to the label and an id attribute to the input with the same value.-->
             <input id="name_mieter" class="form-control" name="name_mieter" type="text" value={vertrag.name_mieter} />
           </div>
 
