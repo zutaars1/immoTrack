@@ -94,6 +94,18 @@ async function getVertraegeByImmobilienId(mongoId) {
   return vertrag
 }
 
+async function updateVertrag(id, updatedVertrag) {
+  try {
+    const collection = db.collection("vertraege");
+    await collection.updateOne(
+      { _id: new ObjectId(id) },
+      { $set: updatedVertrag }
+    );
+  } catch (err) {
+    console.log("Fehler beim Update des Vertrags:", err.message);
+  }
+}
+
 
 export default {
   getAllImmobilien,
@@ -101,6 +113,6 @@ export default {
   getAllVertraege,
   getVertragByID,
   getVertraegeByImmobilienId,
-
+  updateVertrag
 };
 

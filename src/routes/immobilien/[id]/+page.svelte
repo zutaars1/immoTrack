@@ -19,7 +19,7 @@
   </div>
 
 <div class="col-md-6">
-    <h5>Vertrag</h5>
+    <h5>Mieter</h5>
         <ul class="list-group mb-3">
           <li class="list-group-item"><strong>Mieter:</strong> {data.vertrag.name_mieter}</li>
           <li class="list-group-item"><strong>Startdatum:</strong> {data.vertrag.startdatum}</li>
