@@ -66,23 +66,23 @@ async function getAllVertraege() {
 
 // Get Vertrag by id
 async function getVertragByID(id) {
-  let vertrag = null;
+  let contract = null;
   try {
     const collection = db.collection("vertraege");
     const query = { _id: new ObjectId(id) }; // filter by id
-    vertrag = await collection.findOne(query);
+    contract = await collection.findOne(query);
 
-    if (!vertrag) {
+    if (!contract) {
       console.log("Keine Vertragsdetails hinterlegt mit der ID: " + id);
       // TODO: errorhandling
     } else {
-      vertrag._id = vertrag._id.toString(); // convert ObjectId to String
+      contract._id = contract._id.toString(); // convert ObjectId to String
     }
   } catch (error) {
     // TODO: errorhandling
     console.log(error.message);
   }
-  return vertrag;
+  return contract;
 }
 
 
