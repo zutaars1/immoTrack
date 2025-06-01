@@ -13,7 +13,6 @@
   <div class="card-body d-flex flex-column justify-content-between">
     <div>
       <strong><h5 class="card-title">{immo.bezeichnung}</h5></strong>
-      <strong>Art:</strong> {immo.art}<br />
     </div>
 
     <div class="mt-3">
