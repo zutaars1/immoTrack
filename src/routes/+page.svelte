@@ -9,6 +9,7 @@
 <img src="/immoTrack.png" alt="Logo immoTrack" class="d-block mx-auto my-5" style="max-width: 300px;" />
 
 <div class="row mt-5">
+  
   <div class="col-md-6 mb-3">
     <div class="card shadow-sm">
       <div class="card-body">
@@ -29,7 +30,7 @@
     </div>
   </div>
 
-    <div class="col-md-6 mb-3">
+  <div class="col-md-6 mb-3">
     <div class="card shadow-sm">
       <div class="card-body">
         <h5 class="card-title"><b>Immobilie erfassen</b></h5>
