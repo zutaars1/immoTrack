@@ -118,6 +118,14 @@ async function updateImmobilie(id, updated) {
   }
 }
 
+async function createImmobilie(immobilie) {
+  try {
+    const collection = db.collection("immobilien");
+    await collection.insertOne(immobilie);
+  } catch (err) {
+    console.log("Fehler beim Erstellen der Immobilie:", err.message);
+  }
+}
 
 
 export default {
@@ -127,6 +135,7 @@ export default {
   getVertragByID,
   getVertraegeByImmobilienId,
   updateVertrag,
-  updateImmobilie
+  updateImmobilie,
+  createImmobilie
 };
 

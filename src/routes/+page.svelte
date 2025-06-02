@@ -41,14 +41,4 @@
     </div>
   </div>
 
-  <div class="col-md-6 mb-3">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title"><b>Neuer Vertrag</b></h5>
-        <p class="card-text">Erfasse einen neuen Vertrag.</p>
-        <a href="/vertraege/create" class="btn btn-success">Vertrag erfassen</a>
-      </div>
-    </div>
-  </div>
-
 </div>

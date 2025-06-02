@@ -19,6 +19,7 @@
 	"dependencies": {
 		"db": "^6.0.3",
 		"mongo": "^0.1.0",
-		"mongodb": "^6.16.0"
+		"mongodb": "^6.16.0",
+		"node-fetch": "^3.3.2"
 	}
 }

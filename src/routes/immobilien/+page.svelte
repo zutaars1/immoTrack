@@ -37,7 +37,7 @@
   </select>
 </div>
 
-<!-- Ergebnisse -->
+
 {#if filteredImmos.length > 0}
   <p class="text-muted mb-1">
     {filteredImmos.length} {filteredImmos.length === 1 ? 'Immobilie' : 'Immobilien'}

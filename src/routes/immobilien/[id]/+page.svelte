@@ -14,6 +14,7 @@
     <div class="card mb-4">
       <div class="card-header">Immobiliendetails</div>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>ID:</strong> {immobilie.id}</li>
         <li class="list-group-item"><strong>Adresse:</strong> {immobilie.adresse}</li>
         <li class="list-group-item"><strong>Art:</strong> {immobilie.art}</li>
         <li class="list-group-item"><strong>Baujahr:</strong> {immobilie.baujahr}</li>
