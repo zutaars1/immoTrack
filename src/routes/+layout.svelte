@@ -1,5 +1,5 @@
 <script>
-  import "../style.css";
+  import "../app.css";
   let { children } = $props();
 </script>
 
