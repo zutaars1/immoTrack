@@ -1,4 +1,5 @@
 <script>
+  import "./style.css";
   let { children } = $props();
 </script>
 
@@ -38,10 +39,3 @@
     {/if}
   </div>
 </div>
-
-<style>
-	:global(body) {
-		background-color: rgb(41, 24, 76);
-		color: white;
-	}
-</style>
